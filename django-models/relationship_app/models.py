@@ -9,8 +9,8 @@ class Book(models.Model):
 
 class Library(models.Model):
     name = models.CharField(max_length = 100)
-    books = models.ManyToManyField(Book)
+    books = models.ManyToManyField(Book, related_name = 'libraries')
 
 class Librarian(models.Model):
     name = models.CharField(max_length = 100)
-    library = models.OneToOneField(Library, on_delete = models.CASCADE, related_name = 'library')
+    library = models.OneToOneField(Library, on_delete = models.CASCADE, related_name = 'librarian')
