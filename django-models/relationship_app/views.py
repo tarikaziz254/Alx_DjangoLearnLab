@@ -5,8 +5,8 @@ from django.views.generic.detail import DetailView
 from django.contrib.auth.forms import UserCreationForm
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
-from django.contrib.auth import Login
-from django.contrib.auth import Logout
+from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LogoutView
 def list_books(request):
     books = Book.objects.all()
     return render(request, 'relationship_app/list_books.html', {'books': books})
