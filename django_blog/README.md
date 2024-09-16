@@ -1,0 +1,6 @@
+# Django Blog CRUD Project
+
+## Features:
+- Create, Read, Update, Delete (CRUD) operations for blog posts.
+- Users can only edit or delete their own posts.
+- Only authenticated users can create new posts.
